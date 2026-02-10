@@ -6,6 +6,15 @@ import MicahBridesmaidImage from "../../assets/micah_bridesmaid.jpeg"
 import SarahBridesmaidImage from "../../assets/sarah_bridesmaid.jpeg"
 import AnnieBridesmaidImage from "../../assets/annie_bridesmaid.jpg"
 import NikkiBridesmaidImage from "../../assets/nikki_bridesmaid.jpeg"
+
+import AndyGroomsmenImage from "../../assets/andy_groomsmen.jpeg"
+import AveryGroomsmenImage from "../../assets/avery_groomsmen.jpeg"
+import TravisGroomsmenImage from "../../assets/travis_groomsmen.jpeg"
+import EvanGroomsmenImage from "../../assets/evan_groomsmen.jpeg"
+import RyanGroomsmenImage from "../../assets/ryan_groomsmen.jpeg"
+import BrennanGroomsmenImage from "../../assets/brennan_groomsmen.jpeg"
+import LoganGroomsmenImage from "../../assets/logan_groomsmen.jpeg"
+import AlexGroomsmenImage from "../../assets/alex_groomsmen.jpeg"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Navigation from "../components/Navigation";
 
@@ -77,49 +86,49 @@ export default function BridalParty() {
       name: "Andy Pellett",
       role: "Best Man",
       bio: "Insert Paragraph for Andy here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: AndyGroomsmenImage
     },
     {
       name: "Avery Faust",
       role: "Groomsman",
       bio: "Insert Paragraph for Avery here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: AveryGroomsmenImage
     },
     {
       name: "Travis Whittaker",
       role: "Groomsman",
       bio: "Insert Paragraph for Travis here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: TravisGroomsmenImage
     },
     {
       name: "Evan Gray",
       role: "Best Man",
       bio: "Insert Paragraph for Evan here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: EvanGroomsmenImage
     },
     {
       name: "Ryan Quihano",
       role: "Groomsman",
       bio: "Insert Paragraph for Ryan here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: RyanGroomsmenImage
     },
     {
       name: "Brennan Loy",
       role: "Groomsman",
       bio: "Insert Paragraph for Brennan here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: BrennanGroomsmenImage
     },
     {
       name: "Alex Poncio-Bock",
       role: "Groomsman",
       bio: "Insert Paragraph for Alex here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: AlexGroomsmenImage
     },
     {
       name: "Logan Jung",
       role: "Groomsman",
       bio: "Insert Paragraph for Logan here...",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      image: LoganGroomsmenImage
     }
   ];
 
