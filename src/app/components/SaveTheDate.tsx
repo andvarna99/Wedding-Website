@@ -38,16 +38,16 @@ export default function SaveTheDate() {
             <div className="space-y-12">
               <div>
                 <div className="flex items-center gap-6 mb-8">
-                  <span className="text-xs tracking-[0.3em] text-[#1A1A1A]">
+                  <span className="text-xl tracking-[0.3em] text-[#1A1A1A]">
                     MARK YOUR CALENDAR
                   </span>
                   <div className="w-12 h-px bg-[#8B5A3C]"></div>
                 </div>
 
-                <h2 className="text-7xl md:text-8xl lg:text-9xl text-[#430813] font-light leading-none mb-4">
+                <h2 className="text-8xl md:text-8xl lg:text-9xl text-[#430813] font-light leading-none mb-4">
                   save
                 </h2>
-                <h2 className="text-7xl md:text-8xl lg:text-9xl text-[#430813] font-light leading-none">
+                <h2 className="text-8xl md:text-8xl lg:text-9xl text-[#430813] font-light leading-none">
                   the date
                 </h2>
               </div>
@@ -55,7 +55,7 @@ export default function SaveTheDate() {
               {/* Date details */}
               <div className="space-y-6 border-l-2 border-[#8B5A3C] pl-8">
                 <div>
-                  <p className="text-xs text-[#1A1A1A]/60 mb-1 tracking-wider">
+                  <p className="text-xl text-[#1A1A1A]/75 mb-1 tracking-wider">
                     DATE
                   </p>
                   <p className="text-2xl text-[#1A1A1A]">
@@ -64,7 +64,7 @@ export default function SaveTheDate() {
                 </div>
 
                 <div>
-                  <p className="text-xs text-[#1A1A1A]/60 mb-1 tracking-wider">
+                  <p className="text-xl text-[#1A1A1A]/75 mb-1 tracking-wider">
                     TIME
                   </p>
                   <p className="text-2xl text-[#1A1A1A]">
@@ -73,19 +73,25 @@ export default function SaveTheDate() {
                 </div>
 
                 <div>
-                  <p className="text-xs text-[#1A1A1A]/60 mb-1 tracking-wider">
+                  <p className="text-xl text-[#1A1A1A]/75 mb-1 tracking-wider">
                     LOCATION
                   </p>
                   <p className="text-2xl text-[#1A1A1A] mb-2">
                     Carlowrie Castle, Edinburgh
                   </p>
-                  <p className="text-sm text-[#1A1A1A]/70">
-                    Boathouse, Bridge Rd,
-                    <br />
-                    Kirkliston, Edinburgh EH29 9ES,
-                    <br />
-                    United Kingdom
-                  </p>
+                  <Link
+                      to="https://www.google.com/maps/place/Carlowrie+Castle/@55.9555322,-3.3781987,17z/data=!3m1!4b1!4m6!3m5!1s0x4887c5138fff3259:0x8fc1bb18458f8701!8m2!3d55.9555322!4d-3.3756238!16s%2Fg%2F11b6t_kfk8?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                  >
+                    <p className="text-xl text-[#1A1A1A]/70">
+                      Boathouse, Bridge Rd,
+                      <br />
+                      Kirkliston, Edinburgh EH29 9ES,
+                      <br />
+                      United Kingdom
+                    </p>
+                  </Link>
+
                 </div>
               </div>
 
