@@ -1,105 +1,124 @@
+import AthenaBridesmaidImage from "../../assets/athena_bridesmaid.jpeg"
+import AbbyBridesmaidImage from "../../assets/abby_bridesmaid.jpeg"
+import JennyBridesmaidImage from "../../assets/jenny_bridesmaid.jpeg"
+import LilyBridesmaidImage from "../../assets/lily_bridesmaid.jpeg"
+import MicahBridesmaidImage from "../../assets/micah_bridesmaid.jpeg"
+import SarahBridesmaidImage from "../../assets/sarah_bridesmaid.jpeg"
+import AnnieBridesmaidImage from "../../assets/annie_bridesmaid.jpg"
+import NikkiBridesmaidImage from "../../assets/nikki_bridesmaid.jpeg"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Navigation from "../components/Navigation";
 
 export default function BridalParty() {
   const bridesmaids = [
     {
-      name: "Sarah Mitchell",
+      name: "Athena Boneta",
       role: "Maid of Honor",
-      bio: "Andrea's sister and best friend since childhood. Sarah has been there through every milestone and adventure.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "Insert Paragraph for athena here...",
+      image: AthenaBridesmaidImage
     },
     {
-      name: "Emily Chen",
+      name: "Abigail Faust",
+      role: "Matron of Honor",
+      bio: "I’m Abby, and I am SO pumped to be Andrea’s bridesmaid!! " +
+          "A&J are two of my favorite people in the world. My husband Avery and I knew Jacob just before he started dating Andrea - " +
+          "it was obvious when they met that J was enamored and that they were a perfect match. Skip to today, " +
+          "we now live down the street from A&J and enjoy bugging them for food and showing up uninvited. " +
+          "Thankfully they’re too kind to tell us to **** off :) See you all in Scotland!",
+      image: AbbyBridesmaidImage
+    },
+    {
+      name: "Jennifer Hernandez",
       role: "Bridesmaid",
-      bio: "College roommate turned lifelong friend. Emily's creativity and spirit brighten every room.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "Insert Paragraph for jenny here...",
+      image: JennyBridesmaidImage
     },
     {
-      name: "Jessica Rodriguez",
+      name: "Lily Varnado",
       role: "Bridesmaid",
-      bio: "Andrea's work colleague who became family. Jessica's wit and wisdom are unmatched.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "Insert Paragraph for lily here...",
+      image: LilyBridesmaidImage
     },
     {
-      name: "Sarah Mitchell",
-      role: "Maid of Honor",
-      bio: "Andrea's sister and best friend since childhood. Sarah has been there through every milestone and adventure.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
-    },
-    {
-      name: "Emily Chen",
+      name: "Micah Larson",
       role: "Bridesmaid",
-      bio: "College roommate turned lifelong friend. Emily's creativity and spirit brighten every room.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "Insert Paragraph for micah here...",
+      image: MicahBridesmaidImage
     },
     {
-      name: "Jessica Rodriguez",
+      name: "Sarah Jacobs",
       role: "Bridesmaid",
-      bio: "Andrea's work colleague who became family. Jessica's wit and wisdom are unmatched.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "Insert Paragraph for sarah here...",
+      image: SarahBridesmaidImage
     },
     {
-      name: "Emily Chen",
+      name: "Nikki Poncio-Bock",
       role: "Bridesmaid",
-      bio: "College roommate turned lifelong friend. Emily's creativity and spirit brighten every room.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "I met Andrea in September 2020 when I started dating my now-husband, Alex (he’s also one of Jacob’s groomsmen)! " +
+          "Today, Alex and I live in LA with our son and 2 cats. My favorite thing about Andrea is her compassion and genuine interest in others. " +
+          "I’ve loved getting to know her more over the years and I’m so excited to stand by her side in October!",
+      image: NikkiBridesmaidImage
     },
     {
-      name: "Jessica Rodriguez",
+      name: "Annie Millerbernd",
       role: "Bridesmaid",
-      bio: "Andrea's work colleague who became family. Jessica's wit and wisdom are unmatched.",
-      image: "https://images.unsplash.com/photo-1603132789551-47b97377046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwZWxlZ2FudHxlbnwxfHx8fDE3Njk3NDA4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      bio: "I met Jacob and Andrea on Dec. 31, 2019. Logan, my husband and longtime friend of Jacob, brought me there to celebrate the new year, just the four of us. " +
+          "Both of our relationships were somewhat new at the time and I remember wondering if Logan and I fit as effortlessly as they seemed to. " +
+          "Over the next six years, our relationships sort of grew up together. We adopted dogs, moved, bought houses, made new friends, got new jobs -- " +
+          "Andrea and I both went on very important hair journeys. Even when life got busy and connections were harder to maintain, the four of us never grew apart." +
+          "The opportunity to watch two people grow in love over several years is rare; it's one of the best parts of life. " +
+          "I'm so fortunate to have a friendship in these two that I know will be lifelong, and I couldn't be more honored to be part of their special day.",
+      image: AnnieBridesmaidImage
     }
   ];
 
   const groomsmen = [
     {
-      name: "Michael Thompson",
+      name: "Andy Pellett",
       role: "Best Man",
-      bio: "Jacob's brother and partner in crime. Michael has always had Jacob's back through thick and thin.",
+      bio: "Insert Paragraph for Andy here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "David Park",
+      name: "Avery Faust",
       role: "Groomsman",
-      bio: "Jacob's childhood best friend. They've shared countless memories from playground to present.",
+      bio: "Insert Paragraph for Avery here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "Ryan O'Connor",
+      name: "Travis Whittaker",
       role: "Groomsman",
-      bio: "University roommate and adventure buddy. Ryan brings joy and laughter wherever he goes.",
+      bio: "Insert Paragraph for Travis here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "Michael Thompson",
+      name: "Evan Gray",
       role: "Best Man",
-      bio: "Jacob's brother and partner in crime. Michael has always had Jacob's back through thick and thin.",
+      bio: "Insert Paragraph for Evan here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "David Park",
+      name: "Ryan Quihano",
       role: "Groomsman",
-      bio: "Jacob's childhood best friend. They've shared countless memories from playground to present.",
+      bio: "Insert Paragraph for Ryan here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "Ryan O'Connor",
+      name: "Brennan Loy",
       role: "Groomsman",
-      bio: "University roommate and adventure buddy. Ryan brings joy and laughter wherever he goes.",
+      bio: "Insert Paragraph for Brennan here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "David Park",
+      name: "Alex Poncio-Bock",
       role: "Groomsman",
-      bio: "Jacob's childhood best friend. They've shared countless memories from playground to present.",
+      bio: "Insert Paragraph for Alex here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     },
     {
-      name: "Ryan O'Connor",
+      name: "Logan Jung",
       role: "Groomsman",
-      bio: "University roommate and adventure buddy. Ryan brings joy and laughter wherever he goes.",
+      bio: "Insert Paragraph for Logan here...",
       image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBmb3JtYWx8ZW58MXx8fHwxNzY5Njc1MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
     }
   ];
@@ -110,13 +129,12 @@ export default function BridalParty() {
       <div className="min-h-screen bg-[#D4C5B9] px-8 md:px-16 lg:px-24 py-16 md:py-24">
         {/* Geometric elements */}
         <div className="absolute left-8 md:left-16 top-24 h-[calc(100%-6rem)] w-px bg-[#1A1A1A]/20"></div>
-        <div className="absolute right-8 md:right-16 top-1/2 w-2 h-2 bg-[#8B5A3C]"></div>
 
         <div className="max-w-7xl mx-auto">
           {/* Page Header */}
-          <div className="mb-16 md:mb-24">
+          <div className="mb-8 md:mb-16">
             <div className="flex items-center gap-6 mb-8">
-          <span className="text-xs tracking-[0.3em] text-[#1A1A1A]">
+          <span className="tracking-[0.3em] text-[#1A1A1A]">
             OUR CLOSEST FRIENDS
           </span>
               <div className="w-12 h-px bg-[#8B5A3C]"></div>
@@ -127,14 +145,14 @@ export default function BridalParty() {
             <h1 className="text-6xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-none">
               Party
             </h1>
-            <p className="mt-8 text-lg text-[#1A1A1A]/70 max-w-2xl">
+            <p className="mt-8 text-2xl text-[#1A1A1A]/70 max-w-2xl">
               Meet the wonderful people who will be standing beside us on our special day.
             </p>
           </div>
 
           {/* Bridesmaids */}
-          <div className="mb-24">
-            <h2 className="text-4xl md:text-5xl text-[#430813] font-light mb-12">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl text-[#430813] font-light mb-6">
               Bridesmaids
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -148,13 +166,13 @@ export default function BridalParty() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-2xl text-[#1A1A1A] font-light">
+                      <h3 className="text-4xl text-[#1A1A1A] font-light">
                         {person.name}
                       </h3>
-                      <p className="text-xs tracking-[0.2em] text-[#8B5A3C]">
+                      <p className="text-xl tracking-[0.2em] text-[#8B5A3C]">
                         {person.role}
                       </p>
-                      <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
+                      <p className="text-[#1A1A1A]/70 leading-relaxed">
                         {person.bio}
                       </p>
                     </div>
@@ -179,13 +197,13 @@ export default function BridalParty() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-2xl text-[#1A1A1A] font-light">
+                      <h3 className="text-4xl text-[#1A1A1A] font-light">
                         {person.name}
                       </h3>
-                      <p className="text-xs tracking-[0.2em] text-[#8B5A3C]">
+                      <p className="text-2xl tracking-[0.2em] text-[#8B5A3C]">
                         {person.role}
                       </p>
-                      <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
+                      <p className="text-xl text-[#1A1A1A]/70 leading-relaxed">
                         {person.bio}
                       </p>
                     </div>
