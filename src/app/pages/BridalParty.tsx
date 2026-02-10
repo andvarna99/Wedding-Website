@@ -1,9 +1,13 @@
+import AndreaBrideImage from "../../assets/bride_placeholder.jpeg"
+import JacobGroomImage from "../../assets/groom_placeholder.jpeg"
+import BrideAndGroomImage from "../../assets/bride_and_groom_placeholder.jpg"
+
 import AthenaBridesmaidImage from "../../assets/athena_bridesmaid.jpeg"
 import AbbyBridesmaidImage from "../../assets/abby_bridesmaid.jpeg"
 import JennyBridesmaidImage from "../../assets/jenny_bridesmaid.jpeg"
 import LilyBridesmaidImage from "../../assets/lily_bridesmaid.jpeg"
 import MicahBridesmaidImage from "../../assets/micah_bridesmaid.jpeg"
-import SarahBridesmaidImage from "../../assets/sarah_bridesmaid.jpeg"
+import SarahBridesmaidImage from "../../assets/sarah_bridesmaid.png"
 import AnnieBridesmaidImage from "../../assets/annie_bridesmaid.jpg"
 import NikkiBridesmaidImage from "../../assets/nikki_bridesmaid.jpeg"
 
@@ -19,6 +23,23 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Navigation from "../components/Navigation";
 
 export default function BridalParty() {
+  const brideAndGroom = {
+    bride: {
+      name: "Andrea Varnado",
+      image: AndreaBrideImage,
+      bio: "Insert sentence for Andrea here..."
+    },
+    groom: {
+      name: "Jacob Boneta",
+      image: JacobGroomImage,
+      bio: "Insert sentence for Jacob here..."
+    },
+    both: {
+      name: "Jacob + Andrea",
+      image: BrideAndGroomImage
+    }
+  };
+
   const bridesmaids = [
     {
       name: "Athena Boneta",
@@ -57,7 +78,10 @@ export default function BridalParty() {
     {
       name: "Sarah Jacobs",
       role: "Bridesmaid",
-      bio: "Insert Paragraph for sarah here...",
+      bio: "Hi, I’m Sarah! Andrea and I met as bratty little kids doing musical theatre, and even then her beauty and talent were unmatched. " +
+          "Fast forward 10 years: we reconnected when Andrea started dating Jacob (a friend of my fiancé Brennan) during an amazing day at Six Flags and I knew immediately they were something special. " +
+          "I’m so grateful for life’s plot twists — never did I imagine I’d grow up to call Andrea one of my best friends, be A+J’s neighbor, watch them welcome little Junie, witness their engagement, " +
+          "and stand beside them at their very own fairytale wedding. Cheers to the future Mr. and Mrs. Boneta!",
       image: SarahBridesmaidImage
     },
     {
@@ -135,6 +159,67 @@ export default function BridalParty() {
   return (
     <>
       <Navigation />
+      {/* Bride and Groom Hero Section */}
+      <div className="min-h-screen bg-[#1A1A1A] relative px-8 md:px-16 lg:px-24 py-16">
+        {/* Geometric elements */}
+        <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
+        <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
+
+        <div className="max-w-7xl mx-auto mt-32">
+          {/* Header */}
+          <div className="mb-16 text-center border-b-2 border-[#8B5A3C]">
+            <div className="flex items-center justify-center gap-6 mb-8">
+              <div className="w-12 h-px bg-[#8B5A3C]"></div>
+              <h1 className="text-2xl md:text-4xl lg:text-7xl text-[#D4C5B9] font-light leading-none mb-4 tracking-[0.3em]">
+                THE HAPPY COUPLE
+              </h1>
+              <div className="w-12 h-px bg-[#8B5A3C]"></div>
+            </div>
+            <div className="text-center flex items-center justify-center">
+              <div className="rounded-full flex items-center justify-center gap-6 mb-8 aspect-[3/4] size-80 bg-[#D4C5B9]/10 mb-6 overflow-hidden">
+                <ImageWithFallback
+                    src={brideAndGroom.both.image}
+                    alt={brideAndGroom.both.name}
+                    className="h-full w-full object-cover transition-all duration-500 rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bride and Groom Images */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 max-w-5xl mx-auto">
+            {/* Bride */}
+            <div className="group">
+              <div className="space-y-3 text-center">
+                <h1 className="text-4xl tracking-[0.2em] text-[#D4C5B9] mb-5">
+                  THE GROOM
+                </h1>
+                <h3 className="text-3xl text-[#D4C5B9] font-light">
+                  {brideAndGroom.groom.name}
+                </h3>
+                <p className="text-xl text-[#D4C5B9]/70 leading-relaxed max-w-sm mx-auto">
+                  {brideAndGroom.groom.bio}
+                </p>
+              </div>
+            </div>
+
+            {/* Groom */}
+            <div className="group">
+              <div className="space-y-3 text-center">
+                <p className="text-4xl tracking-[0.2em] text-[#D4C5B9] mb-5">
+                  THE BRIDE
+                </p>
+                <h3 className="text-3xl text-[#D4C5B9] font-light">
+                  {brideAndGroom.bride.name}
+                </h3>
+                <p className="text-xl text-[#D4C5B9]/70 leading-relaxed max-w-sm mx-auto">
+                  {brideAndGroom.bride.bio}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="min-h-screen bg-[#D4C5B9] px-8 md:px-16 lg:px-24 py-16 md:py-24">
         {/* Geometric elements */}
         <div className="absolute left-8 md:left-16 top-24 h-[calc(100%-6rem)] w-px bg-[#1A1A1A]/20"></div>
