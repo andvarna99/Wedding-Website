@@ -15,7 +15,7 @@ export default function EventDetails() {
             </span>
           </div>
 
-          <h2 className="text-8xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-tight">
+          <h2 className="text-6xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-tight">
             Celebration
           </h2>
         </div>
