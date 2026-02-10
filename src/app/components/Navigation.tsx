@@ -16,28 +16,28 @@ export default function Navigation() {
   ];
 
   return (
-      <nav className="sticky top-0 z-50 bg-[#D4C5B9]/95 backdrop-blur-sm border-b border-[#1A1A1A]/10">
+      <nav className="sticky top-0 z-50 bg-[#250201]/95 backdrop-blur-sm border-b border-[#D4C5B9]/10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo/Name */}
             <Link
                 to="/"
-                className="font-script text-3xl text-[#430813]"
+                className="font-script text-3xl text-[#8B5A3C]"
                 onClick={() => setMobileMenuOpen(false)}
             >
               A & J
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-6">
               {links.map((link) => (
                   <Link
                       key={link.path}
                       to={link.path}
-                      className={`text-lg tracking-[0.2em] transition-colors ${
+                      className={`text-[#D4C5B9] hover:text-[#8B5A3C] text-lg tracking-[0.2em] transition-colors ${
                           location.pathname === link.path
-                              ? "text-[#430813] font-medium"
-                              : "text-[#1A1A1A]/60 hover:text-[#430813]"
+                              ? "text-[#8B5A3C] font-medium"
+                              : "text-[#1A1A1A]/60 "
                       }`}
                   >
                     {link.label}
@@ -48,7 +48,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden text-[#430813] p-2 flex-shrink-0"
+                className="lg:hidden text-[#D4C5B9] p-2 flex-shrink-0"
                 aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,9 +63,9 @@ export default function Navigation() {
                         key={link.path}
                         to={link.path}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`block py-3 text-lg tracking-[0.2em] transition-colors ${
+                        className={`text-[#D4C5B9] hover:text-[#8B5A3C] block py-3 text-lg tracking-[0.2em] transition-colors ${
                             location.pathname === link.path
-                                ? "text-[#430813] font-medium"
+                                ? "text-[#8B5A3C] font-medium"
                                 : "text-[#1A1A1A]/60"
                         }`}
                     >

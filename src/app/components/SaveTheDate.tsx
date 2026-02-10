@@ -6,7 +6,6 @@ export default function SaveTheDate() {
     <section className="min-h-screen bg-[#D4C5B9] relative px-8 md:px-16 lg:px-24 py-24 md:py-32">
       {/* Geometric elements */}
       <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#1A1A1A]"></div>
-      <div className="absolute left-20 md:left-28 top-1/3 w-2 h-2 bg-[#8B5A3C]"></div>
 
       {/* Main content */}
       <div className="max-w-7xl mx-auto">

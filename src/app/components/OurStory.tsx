@@ -80,7 +80,7 @@ export default function OurStory() {
                     image_93c93de743383983e25d1187e49686217172077d
                   }
                   alt="Andrea and Jacob"
-                  className="w-full h-full object-cover opacity-90 rounded-[5px] sepia-50"
+                  className="w-full h-full object-cover opacity-90 rounded-[5px] grayscale"
                 />
               </div>
             </div>

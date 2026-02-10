@@ -30,7 +30,6 @@ export default function RSVP() {
                     {/* Geometric elements */}
                     <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
                     <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
-                    <div className="absolute left-20 md:left-28 top-1/3 w-2 h-2 bg-[#8B5A3C]"></div>
 
                     <div className="max-w-3xl mx-auto text-center">
                         <div className="space-y-8">
@@ -61,7 +60,6 @@ export default function RSVP() {
                 {/* Geometric elements */}
                 <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
                 <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
-                <div className="absolute left-20 md:left-28 top-1/3 w-2 h-2 bg-[#8B5A3C]"></div>
 
                 <div className="max-w-4xl mx-auto">
                     {/* Header */}

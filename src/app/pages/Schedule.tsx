@@ -11,37 +11,37 @@ export default function Schedule() {
     {
       time: "2:00 PM",
       event: "Ceremony",
-      description: "Join us as we say our vows in front of our closest friends and loved ones",
+      description: "Join us as we say our vows in front of our closest friends and loved ones.",
       location: "Castle Orangery"
     },
     {
       time: "2:30 PM",
       event: "Drinks Reception / Wedding Portraits",
-      description: "Enjoy cocktails and canapés while we capture our first moments as newlyweds",
+      description: "Enjoy cocktails and canapés while we capture our first moments as newlyweds.",
       location: "Piano Room / Library Bar"
     },
     {
       time: "4:00 PM",
       event: "Call to Dinner",
-      description: "A delicious three-course meal prepared by our renowned chefs",
+      description: "Prepare for the wedding banquet later in the evening.",
       location: "Castle Grounds"
     },
     {
       time: "4:30 PM",
       event: "Wedding Party Entrances",
-      description: "A delicious three-course meal prepared by the castle's renowned chefs",
+      description: "Welcome the bridal party and newlyweds into the orangery for the banquet.",
       location: "Castle Orangery"
     },
     {
       time: "5:00 PM",
       event: "Wedding Banquet & Speeches",
-      description: "A delicious three-course meal prepared by the castle's renowned chefs",
+      description: "A delicious three-course meal prepared by the castle's renowned chefs.",
       location: "Castle Orangery"
     },
     {
       time: "7:00 PM",
       event: "Cake Cutting",
-      description: "Join us for a sweet celebration with our wedding cake",
+      description: "Join us for a sweet celebration as we cut our wedding cake.",
       location: "Castle Orangery"
     },
     {
@@ -53,19 +53,19 @@ export default function Schedule() {
     {
       time: "8:00 PM",
       event: "Evening Reception",
-      description: "Dance the night away with live music and entertainment",
+      description: "Dance the night away with live music and entertainment.",
       location: "Castle Orangery"
     },
     {
       time: "10:00 PM",
       event: "Late Night Bites",
-      description: "Enjoy a few late night snacks in between the party",
+      description: "Enjoy a few late night snacks in between the party.",
       location: "Castle Orangery"
     },
     {
       time: "12:30 AM",
-      event: "Last Dance",
-      description: "One final dance to close out our perfect day",
+      event: "Last Call and LastDance",
+      description: "One final drink and dance to close out our perfect day.",
       location: "Castle Orangery"
     }
   ];
