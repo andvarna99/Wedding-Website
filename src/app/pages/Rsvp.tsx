@@ -52,6 +52,8 @@ export default function RSVP() {
         );
     }
 
+    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
+
     return (
         <>
             <Navigation />
@@ -80,7 +82,7 @@ export default function RSVP() {
                     </div>
 
                     {/* Form */}
-                    <form action="https://formspree.io/f/mvzbgnak" method="POST" className="space-y-8">
+                    <form action={FORMSPREE_URL} method="POST" className="space-y-8">
                         {/* Name Fields */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
