@@ -14,12 +14,12 @@ export default function OurStory() {
             <div>
               <div className="flex items-center gap-6 mb-8">
                 <div className="w-12 h-px bg-[#8B5A3C]"></div>
-                <span className="text-xs tracking-[0.3em] text-[#D4C5B9]">
+                <span className="text-xl tracking-[0.3em] text-[#D4C5B9]">
                   OUR STORY
                 </span>
               </div>
 
-              <h2 className="text-6xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-tight mb-12">
+              <h2 className="text-8xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-tight mb-12">
                 The road to
                 <br />
                 forever...
@@ -27,7 +27,7 @@ export default function OurStory() {
             </div>
 
             <div className="space-y-6 max-w-lg">
-              <p className="text-[#D4C5B9] leading-relaxed text-sm">
+              <p className="text-[#D4C5B9] leading-relaxed text-xl">
                 Some love stories begin quietly, almost
                 unnoticed, until you realize they’ve been
                 unfolding all along.
@@ -59,8 +59,8 @@ export default function OurStory() {
             </div>
 
             {/* Number indicator */}
-            <div className="flex items-end gap-4 pt-8">
-              <span className="text-7xl font-light text-[#8B5A3C]">
+            <div className="flex items-end gap-4">
+              <span className="text-6xl font-light text-[#8B5A3C]">
                 10.10.2026
               </span>
               <div className="w-24 h-px bg-[#8B5A3C] mb-4"></div>
