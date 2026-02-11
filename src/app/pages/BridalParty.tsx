@@ -13,12 +13,12 @@ import NikkiBridesmaidImage from "../../assets/nikki_bridesmaid.jpeg"
 
 import AndyGroomsmenImage from "../../assets/andy_groomsmen.jpeg"
 import AveryGroomsmenImage from "../../assets/avery_groomsmen.jpeg"
-import TravisGroomsmenImage from "../../assets/travis_groomsmen.jpeg"
+import TravisGroomsmenImage from "../../assets/travis_placeholder.jpeg"
 import EvanGroomsmenImage from "../../assets/evan_groomsmen.jpeg"
-import RyanGroomsmenImage from "../../assets/ryan_groomsmen.jpeg"
-import BrennanGroomsmenImage from "../../assets/brennan_groomsmen.jpeg"
-import LoganGroomsmenImage from "../../assets/logan_groomsmen.jpeg"
-import AlexGroomsmenImage from "../../assets/alex_groomsmen.jpeg"
+import RyanGroomsmenImage from "../../assets/ryan_placeholder.jpeg"
+import BrennanGroomsmenImage from "../../assets/brennan_placeholder.jpeg"
+import LoganGroomsmenImage from "../../assets/logan_placeholder.jpeg"
+import AlexGroomsmenImage from "../../assets/alex_placeholder.jpeg"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Navigation from "../components/Navigation";
 
