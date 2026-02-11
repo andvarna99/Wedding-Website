@@ -1,10 +1,36 @@
 import image_ada58e7e40d08004e54f01d15ef69ae212379896 from '../../assets/carlowrie_green.png';
+import {useMemo} from "react";
 
 export default function HeroSection() {
+  const petals = useMemo(() => {
+    return Array.from({ length: 50 }, (_, i) => {
+      const left = `${Math.random() * 100}%`;
+      const delay = `${Math.random() * 20}s`;
+      const duration = `${15 + Math.random() * 10}s`;
+      return { id: i, left, delay, duration };
+    });
+  }, []);
+
   return (
-    <section className="min-h-screen bg-[#D4C5B9] relative px-8 md:px-16 lg:px-24 pt-40">
+    <section className="min-h-screen bg-[#D4C5B9] relative px-8 md:px-16 lg:px-24 py-40">
       {/* Main content */}
       <div className="max-w-7xl mx-auto mt-10 md:mt-40">
+        {/* Falling Petals */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="petals">
+            {petals.map(({ id, left, delay, duration }) => (
+                <div
+                    key={id}
+                    className="petal animate-fall"
+                    style={{
+                      left,
+                      animationDelay: delay,
+                      animationDuration: duration,
+                    }}
+                />
+            ))}
+          </div>
+        </div>
         <div className="relative">
           {/* Large typography */}
           <div className="relative z-10 -mt-20 md:-mt-28">

@@ -8,7 +8,7 @@ export default function SaveTheDate() {
       <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#1A1A1A]"></div>
 
       {/* Main content */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ml-2 lg:ml-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left side - Image */}
           <div className="relative order-2 lg:order-1">
@@ -95,7 +95,7 @@ export default function SaveTheDate() {
               </div>
 
               {/* RSVP Button */}
-              <div className="pt-6">
+              <div className="pt-6 flex lg:block justify-center lg:justify-start items-center lg:items-start">
                 <Link
                     to="/rsvp"
                     className="inline-block px-10 py-4 bg-[#430813] text-[#D4C5B9] text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors"

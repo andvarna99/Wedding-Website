@@ -241,7 +241,7 @@ export default function RSVP() {
 
                     {/* Footer Note */}
                     <div className="mt-16 pt-8 border-t border-[#D4C5B9]/20">
-                        <p className="text-sm text-[#D4C5B9]/60 leading-relaxed">
+                        <p className="text-lg text-[#D4C5B9]/60 leading-relaxed">
                             Please RSVP by July 10th, 2026. If you have any questions,
                             please don't hesitate to reach out to us directly.
                         </p>

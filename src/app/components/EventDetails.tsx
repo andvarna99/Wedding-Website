@@ -28,7 +28,7 @@ export default function EventDetails() {
               <h3 className="text-5xl text-[#D4C5B9] font-light">
                 Ceremony
               </h3>
-              <span className="text-4xl text-[#8B5A3C]/75 font-bold">
+              <span className="text-4xl text-[#8B5A3C]/75 font-bold mr-2 lg:mr-0">
                 01
               </span>
             </div>
@@ -62,7 +62,7 @@ export default function EventDetails() {
               <h3 className="text-5xl text-[#D4C5B9] font-light">
                 Reception
               </h3>
-              <span className="text-4xl text-[#8B5A3C]/75 font-bold">
+              <span className="text-4xl text-[#8B5A3C]/75 font-bold mr-2 lg:mr-0">
                 02
               </span>
             </div>
@@ -83,7 +83,7 @@ export default function EventDetails() {
               <h3 className="text-5xl text-[#D4C5B9] font-light">
                 Dinner
               </h3>
-              <span className="text-4xl text-[#8B5A3C]/75 font-bold">
+              <span className="text-4xl text-[#8B5A3C]/75 font-bold mr-2 lg:mr-0">
                 03
               </span>
             </div>
@@ -105,7 +105,7 @@ export default function EventDetails() {
               <h3 className="text-5xl text-[#D4C5B9] font-light">
                 Bar
               </h3>
-              <span className="text-4xl text-[#8B5A3C]/75 font-bold">
+              <span className="text-4xl text-[#8B5A3C]/75 font-bold mr-2 lg:mr-0">
                 04
               </span>
             </div>
