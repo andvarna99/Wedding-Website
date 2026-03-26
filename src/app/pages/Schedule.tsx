@@ -86,7 +86,7 @@ export default function Schedule() {
             </span>
                 <div className="w-12 h-px bg-[#8B5A3C]"></div>
               </div>
-              <h1 className="text-xl md:text-8xl lg:text-10xl text-[#8B5A3C] font-light leading-none mb-4">
+              <h1 className="text-6xl md:text-8xl lg:text-10xl text-[#8B5A3C] font-light leading-none mb-4">
                 Wedding
               </h1>
               <h1 className="text-6xl md:text-8xl lg:text-10xl text-[#8B5A3C] font-light leading-none">

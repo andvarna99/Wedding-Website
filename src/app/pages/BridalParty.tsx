@@ -1,24 +1,24 @@
 import AndreaBrideImage from "../../assets/bride_placeholder.jpeg"
 import JacobGroomImage from "../../assets/groom_placeholder.jpeg"
-import BrideAndGroomImage from "../../assets/bride_and_groom_placeholder.jpg"
+import BrideAndGroomImage from "../../assets/a+j_wes_anderson_shot.jpg"
 
-import AthenaBridesmaidImage from "../../assets/athena_bridesmaid.jpeg"
+import AthenaBridesmaidImage from "../../assets/athena_placeholder.jpeg"
 import AbbyBridesmaidImage from "../../assets/abby_bridesmaid.jpeg"
-import JennyBridesmaidImage from "../../assets/jenny_bridesmaid.jpeg"
+import JennyBridesmaidImage from "../../assets/jenny_bridesmaid.jpg"
 import LilyBridesmaidImage from "../../assets/lily_bridesmaid.jpeg"
 import MicahBridesmaidImage from "../../assets/micah_bridesmaid.jpeg"
 import SarahBridesmaidImage from "../../assets/sarah_bridesmaid.png"
 import AnnieBridesmaidImage from "../../assets/annie_bridesmaid.jpg"
 import NikkiBridesmaidImage from "../../assets/nikki_bridesmaid.jpeg"
 
-import AndyGroomsmenImage from "../../assets/andy_groomsmen.jpeg"
+import AndyGroomsmenImage from "../../assets/andy_placeholder.png"
 import AveryGroomsmenImage from "../../assets/avery_groomsmen.jpeg"
-import TravisGroomsmenImage from "../../assets/travis_placeholder.jpeg"
+import TravisGroomsmenImage from "../../assets/travis_groomsmen.jpeg"
 import EvanGroomsmenImage from "../../assets/evan_groomsmen.jpeg"
-import RyanGroomsmenImage from "../../assets/ryan_placeholder.jpeg"
-import BrennanGroomsmenImage from "../../assets/brennan_placeholder.jpeg"
-import LoganGroomsmenImage from "../../assets/logan_placeholder.jpeg"
-import AlexGroomsmenImage from "../../assets/alex_placeholder.jpeg"
+import RyanGroomsmenImage from "../../assets/ryan_groomsmen.jpeg"
+import BrennanGroomsmenImage from "../../assets/brennan_groomsmen.jpeg"
+import LoganGroomsmenImage from "../../assets/logan_groomsmen.jpeg"
+import AlexGroomsmenImage from "../../assets/alex_groomsmen.jpeg"
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Navigation from "../components/Navigation";
 
@@ -27,7 +27,11 @@ export default function BridalParty() {
     bride: {
       name: "Andrea Varnado",
       image: AndreaBrideImage,
-      bio: "Insert sentence for Andrea here..."
+      bio: "I never thought I would be lucky enough to find somebody like Jacob. " +
+          "Loving him has been the easiest and most certain thing I’ve ever done. He somehow always knows how to make me laugh when " +
+          "I’m taking life a little too seriously." +
+          "I am beyond excited to begin a lifetime of building, dreaming, and growing together." +
+          "I can't wait to celebrate this moment with the people who helped shape us along the way. Love you all, and see you in Edinburgh!!"
     },
     groom: {
       name: "Jacob Boneta",
@@ -50,7 +54,7 @@ export default function BridalParty() {
     {
       name: "Abigail Faust",
       role: "Matron of Honor",
-      bio: "I’m Abby, and I am SO pumped to be Andrea’s bridesmaid!! " +
+      bio: "I’m Abby, and I am SO pumped to be Andrea’s matron of honor!! " +
           "A&J are two of my favorite people in the world. My husband Avery and I knew Jacob just before he started dating Andrea - " +
           "it was obvious when they met that J was enamored and that they were a perfect match. Skip to today, " +
           "we now live down the street from A&J and enjoy bugging them for food and showing up uninvited. " +
@@ -60,19 +64,36 @@ export default function BridalParty() {
     {
       name: "Jennifer Hernandez",
       role: "Bridesmaid",
-      bio: "Insert Paragraph for jenny here...",
+      bio: "Hey, I’m Jenny! I’ve been incredibly blessed to be part of the Boneta/Varnado clan since Andrea and I met in high school 10 years ago. One evening, " +
+          "Andrea was at my house while Athena (MOH) and I helped her get ready for a first date. Now here we are — several years later — standing next to her as she marries that same man, Jacob." +
+          "Being able to witness A + J’s love story from the very beginning, I’ve seen the love and commitment between them continue to grow and flourish. I feel so privileged to have shared so" +
+          "many special moments with them as my found family — from being Tia to Gizmo and Juni, to karaoke dance parties, and now a wedding!" +
+          "I can’t wait to celebrate Andrea & Jacob, create new memories, and shake some ass in Scotland! See y’all across the pond :) Cheers!",
       image: JennyBridesmaidImage
     },
     {
       name: "Lily Varnado",
       role: "Bridesmaid",
-      bio: "Insert Paragraph for lily here...",
+      bio: "I am so incredibly blessed to call Andrea my sister. My big sister has been there through every stage of my life, watching me grow, cheering me on, and inspiring me to dream big. " +
+          "She may not even realize it, but when Andrea chose to attend NESA, she quietly gave me the courage to step outside the ordinary and follow in her footsteps by auditioning there myself. " +
+          "I was still in high school when she met Jacob, the love of her life, and I have had the privilege of watching their love story unfold. Together, they have supported me through so many chapters " +
+          "of my life. Thank you for loving me through all the ups and downs! Jacob, you have become such an important part of our family, and you never miss the chance to bring joy into our lives. " +
+          "Andrea, I love you deeply! You and Jacob deserve a lifetime filled with love, happiness, and endless adventures. I am grateful to stand up with you on this special day, and I cannot wait " +
+          "to see all the beautiful places this journey together will take you. Cheers!!",
       image: LilyBridesmaidImage
     },
     {
       name: "Micah Larson",
       role: "Bridesmaid",
-      bio: "Insert Paragraph for micah here...",
+      bio: "My name is Micah, and I am absolutely thrilled to be lovely Andrea's bridesmaid! I'm a close friend of Andrea and Jacob, " +
+          "and the big sister to their dog, Juni. Although I only met Andrea and Jacob four years ago, " +
+          "in that time we’ve become so close it feels like I’ve known them forever. I’ve been lucky enough to always live nearby, " +
+          "and now just down the street, which means I’ve had a front-row seat to a big part of their journey. " +
+          "From apartments to houses, from tears to dance parties, and from no Juni to ALL the Juni, it has been such a privilege to watch them grow. " +
+          "Not only as two incredible individuals I deeply cherish, but as partners who consistently choose each other and stand strong together " +
+          "in one beautiful relationship." +
+          "A little about me: I LOVE love and am a big crier. So if you see me crying throughout the wedding… no, you didn’t. Rah!" +
+          "I am beyond excited to celebrate these two in Scotland with all of you. Cheerio!",
       image: MicahBridesmaidImage
     },
     {
@@ -115,7 +136,9 @@ export default function BridalParty() {
     {
       name: "Avery Faust",
       role: "Groomsman",
-      bio: "Insert Paragraph for Avery here...",
+      bio: "Hi Everyone, I’m Avery. My wife Abby and I live about 5 minutes from the bride and groom. We bought our houses at the same time (mostly unplanned). Because " +
+          "of this we hang out with these guys all the time, and always are having tons of laughs. Lot's more than you probably have ever had with them. Hence why I’m in the wedding party. " +
+          "And you aren’t.",
       image: AveryGroomsmenImage
     },
     {
@@ -126,32 +149,50 @@ export default function BridalParty() {
     },
     {
       name: "Evan Gray",
-      role: "Best Man",
-      bio: "Insert Paragraph for Evan here...",
+      role: "Groomsman",
+      bio: "Howdy, I'm Evan! Jacob and I go all the way back to high school, and Andrea works with me — so between the two of them, " +
+          "I basically can't escape the Bonetas. I was there one of the first times they met, and I like to think I played a pivotal role in their love story — " +
+          "but the truth is they didn't need much help — some people just find each other! " +
+          "Jacob is one of those rare people who challenge you to think differently about the world — endlessly creative, and never afraid to go deep. " +
+          "After more than a decade of friendship with him and years of working alongside Andrea — one of the most talented and genuine people I know — " +
+          "getting to watch these two build something so beautiful has been one of the best things I've had a front-row seat to. " +
+          "Couldn't be more honored to stand with them in Scotland. Cheers to A+J!",
       image: EvanGroomsmenImage
     },
     {
       name: "Ryan Quihano",
       role: "Groomsman",
-      bio: "Insert Paragraph for Ryan here...",
+      bio: "Jacob and Andrea are two of my best friends and I’m really honored to be there to witness their best day ever with such an amazing group. More importantly, " +
+          "I’m excited to celebrate with those party people.",
       image: RyanGroomsmenImage
     },
     {
       name: "Brennan Loy",
       role: "Groomsman",
-      bio: "Insert Paragraph for Brennan here...",
+      bio: "Hey there, I’m Brennan. I met Jacob about 17 years ago during those golden, unsupervised high school summers with fellow groomsmen Alex Poncio-Bock and Ryan Quijano. " +
+          "We were typical teenage boys: staying up too late, playing video games, and quoting comedies that probably haven’t aged well. Jacob was effortlessly cool and tough to impress, " +
+          "which only made you want to try harder. When I first met Andrea, it was obvious she matched his calm, confident energy. Since then, my fiancée, bridesmaid Sarah Jacobs and I " +
+          "have been lucky to travel and make memories with them. It’s wild to think we went from kids with endless free time to standing beside each other at weddings, and I’m so grateful " +
+          "for the friendship and history we share!",
       image: BrennanGroomsmenImage
     },
     {
       name: "Alex Poncio-Bock",
       role: "Groomsman",
-      bio: "Insert Paragraph for Alex here...",
+      bio: "I’ve known Jacob and Andrea for years. I’ve also known from the second I knew them together as a team that they would get married. " +
+          "I’m proud and honored to be here, to know and love them, and to finally experience the inevitable wedding I’ve always known would happen, " +
+          "here in beautiful Scotland.",
       image: AlexGroomsmenImage
     },
     {
       name: "Logan Jung",
       role: "Groomsman",
-      bio: "Insert Paragraph for Logan here...",
+      bio: "For the longest time, when people saw Jacob and me out grabbing a drink, they assumed we were dating. " +
+          "Now that we both have these incredible women in our lives — and will presumably be wearing wedding rings — " +
+          "people will probably assume we’re married to each other… unless our wives are around. As they say, two’s a couple, three’s a crowd." +
+          "In all seriousness, there are a lot of life lessons baked into this friendship. It truly feels like we grew up together — " +
+          "nearly ten years of knowing Jacob, and all the shenanigans that come with that. I couldn’t be happier for both of them, " +
+          "and I’m incredibly grateful to be here celebrating this special day with you all.",
       image: LoganGroomsmenImage
     }
   ];
@@ -159,67 +200,72 @@ export default function BridalParty() {
   return (
     <>
       <Navigation />
-      {/* Bride and Groom Hero Section */}
-      <div className="min-h-screen bg-[#1A1A1A] relative px-8 md:px-16 lg:px-24 py-16">
-        {/* Geometric elements */}
-        <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
-        <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
+      <div className="size-full">
+        {/* Bride and Groom Hero Section */}
+        <div className="min-h-screen bg-[#1A1A1A] relative px-8 md:px-16 lg:px-24">
+          {/* Background Image */}
+          <div className="absolute inset-0 w-full h-full">
+            <ImageWithFallback
+                src={brideAndGroom.both.image}
+                alt={brideAndGroom.both.name}
+                className="h-full w-full object-cover"
+            />
+            {/* Gradient Overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-400/60 via-black/30 to-black/70"></div>
+          </div>
 
-        <div className="max-w-7xl mx-auto mt-32">
-          {/* Header */}
-          <div className="mb-16 text-center border-b-2 border-[#8B5A3C]">
-            <div className="flex items-center justify-center gap-6 mb-8">
-              <div className="w-12 h-px bg-[#8B5A3C]"></div>
-              <h1 className="text-2xl md:text-4xl lg:text-7xl text-[#D4C5B9] font-light leading-none mb-4 tracking-[0.3em]">
-                THE HAPPY COUPLE
-              </h1>
-              <div className="w-12 h-px bg-[#8B5A3C]"></div>
-            </div>
-            <div className="text-center flex items-center justify-center">
-              <div className="rounded-full flex items-center justify-center gap-6 mb-8 aspect-[3/4] size-80 bg-[#D4C5B9]/10 mb-6 overflow-hidden">
-                <ImageWithFallback
-                    src={brideAndGroom.both.image}
-                    alt={brideAndGroom.both.name}
-                    className="h-full w-full object-cover transition-all duration-500 rounded-full"
-                />
+          {/* Geometric elements */}
+          <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#D4C5B9]/30 z-10"></div>
+          <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30 z-10"></div>
+
+          {/* Content Overlay - positioned in top 40% */}
+          <div className="relative z-20 max-w-7xl mx-auto pt-32 pb-16">
+            {/* Header - in top 40% of the section */}
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-6 mb-8">
+                <div className="w-12 h-px bg-[#8B5A3C]"></div>
+                <h1 className="text-2xl md:text-4xl lg:text-7xl text-[#D4C5B9] font-light leading-none tracking-[0.3em]">
+                  THE HAPPY COUPLE
+                </h1>
+                <div className="w-12 h-px bg-[#8B5A3C]"></div>
               </div>
+              <div className="w-32 h-px bg-[#8B5A3C] mx-auto mt-12"></div>
             </div>
           </div>
 
-          {/* Bride and Groom Images */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 max-w-5xl mx-auto">
-            {/* Bride */}
-            <div className="group">
-              <div className="space-y-3 text-center">
-                <h1 className="text-4xl tracking-[0.2em] text-[#D4C5B9] mb-5">
-                  THE GROOM
-                </h1>
-                <h3 className="text-3xl text-[#D4C5B9] font-light">
-                  {brideAndGroom.groom.name}
-                </h3>
-                <p className="text-xl text-[#D4C5B9]/70 leading-relaxed max-w-sm mx-auto">
-                  {brideAndGroom.groom.bio}
-                </p>
+          {/* Bride and Groom Details - Framing the center */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-[30rem] mt-24 max-w-7xl mx-auto">
+            {/* The Bride - Left Side */}
+            <div className="text-left md:text-right space-y-4 bg-black/40 backdrop-blur-sm p-8 border border-[#D4C5B9]/20">
+              <div className="inline-block">
+                <p className="text-sm text-[#8B5A3C] tracking-[0.2em] uppercase mb-2">The Bride</p>
+                <h2 className="text-3xl md:text-4xl text-[#D4C5B9] font-light mb-4">
+                  {brideAndGroom.bride.name}
+                </h2>
+                <div className="w-16 h-px bg-[#8B5A3C] md:ml-auto mb-4"></div>
               </div>
+              <p className="text-[#D4C5B9]/80 text-sm md:text-base leading-relaxed">
+                {brideAndGroom.bride.bio}
+              </p>
             </div>
 
-            {/* Groom */}
-            <div className="group">
-              <div className="space-y-3 text-center">
-                <p className="text-4xl tracking-[0.2em] text-[#D4C5B9] mb-5">
-                  THE BRIDE
-                </p>
-                <h3 className="text-3xl text-[#D4C5B9] font-light">
-                  {brideAndGroom.bride.name}
-                </h3>
-                <p className="text-xl text-[#D4C5B9]/70 leading-relaxed max-w-sm mx-auto">
-                  {brideAndGroom.bride.bio}
-                </p>
+            {/* The Groom - Right Side */}
+            <div className="text-left space-y-4 bg-black/40 backdrop-blur-sm p-8 border border-[#D4C5B9]/20">
+              <div className="inline-block">
+                <p className="text-sm text-[#8B5A3C] tracking-[0.2em] uppercase mb-2">The Groom</p>
+                <h2 className="text-3xl md:text-4xl text-[#D4C5B9] font-light mb-4">
+                  {brideAndGroom.groom.name}
+                </h2>
+                <div className="w-16 h-px bg-[#8B5A3C] mb-4"></div>
               </div>
+              <p className="text-[#D4C5B9]/80 text-sm md:text-base leading-relaxed">
+                {brideAndGroom.groom.bio}
+              </p>
             </div>
           </div>
         </div>
       </div>
+
       <div className="min-h-screen bg-[#D4C5B9] px-8 md:px-16 lg:px-24 py-16 md:py-24">
         {/* Geometric elements */}
         <div className="absolute left-8 md:left-16 top-24 h-[calc(100%-6rem)] w-px bg-[#1A1A1A]/20"></div>
@@ -234,10 +280,7 @@ export default function BridalParty() {
               <div className="w-12 h-px bg-[#8B5A3C]"></div>
             </div>
             <h1 className="text-6xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-none mb-4">
-              Bridal
-            </h1>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl text-[#8B5A3C] font-light leading-none">
-              Party
+              Bridal Party
             </h1>
             <p className="mt-8 text-2xl text-[#1A1A1A]/70 max-w-2xl">
               Meet the wonderful people who will be standing beside us on our special day.
