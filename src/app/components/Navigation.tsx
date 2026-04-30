@@ -12,7 +12,7 @@ export default function Navigation() {
     { path: "/schedule", label: "Schedule" },
     { path: "/bridal-party", label: "Bridal Party" },
     { path: "/rsvp", label: "RSVP" },
-    { path: "/chat-bot", label: "Chat" },
+    { path: "/chat-bot", label: "FAQ Chat" },
   ];
 
   return (

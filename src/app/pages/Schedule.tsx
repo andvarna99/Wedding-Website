@@ -131,7 +131,7 @@ export default function Schedule() {
               </h3>
               <ul className="space-y-2 text-2xl text-[#1A1A1A]/70">
                 <li>- Please arrive 30 minutes prior to the ceremony beginning</li>
-                <li>- Dress code: Formal Cocktail Attire (Avoid anything close to white to let the bride shine)</li>
+                <li>- Dress code: Formal Attire (Not white-tie but not cocktail attire: think midi - floor length dresses, tailored jumpsuits, well-fitted suits, etc... If any questions arise don't hesitate to reach out or ask or chat bot!)</li>
               </ul>
             </div>
           </div>
