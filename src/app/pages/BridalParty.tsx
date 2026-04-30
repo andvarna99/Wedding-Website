@@ -1,8 +1,6 @@
-import AndreaBrideImage from "../../assets/bride_placeholder.jpeg"
-import JacobGroomImage from "../../assets/groom_placeholder.jpeg"
 import BrideAndGroomImage from "../../assets/a+j_wes_anderson_shot.jpg"
 
-import AthenaBridesmaidImage from "../../assets/athena_placeholder.jpeg"
+import AthenaBridesmaidImage from "../../assets/athena_bridesmaid.jpeg"
 import AbbyBridesmaidImage from "../../assets/abby_bridesmaid.jpeg"
 import JennyBridesmaidImage from "../../assets/jenny_bridesmaid.jpg"
 import LilyBridesmaidImage from "../../assets/lily_bridesmaid.jpeg"
@@ -11,7 +9,7 @@ import SarahBridesmaidImage from "../../assets/sarah_bridesmaid.png"
 import AnnieBridesmaidImage from "../../assets/annie_bridesmaid.jpg"
 import NikkiBridesmaidImage from "../../assets/nikki_bridesmaid.jpeg"
 
-import AndyGroomsmenImage from "../../assets/andy_placeholder.png"
+import AndyGroomsmenImage from "../../assets/andy_groomsmen.jpeg"
 import AveryGroomsmenImage from "../../assets/avery_groomsmen.jpeg"
 import TravisGroomsmenImage from "../../assets/travis_groomsmen.jpeg"
 import EvanGroomsmenImage from "../../assets/evan_groomsmen.jpeg"
@@ -26,16 +24,13 @@ export default function BridalParty() {
   const brideAndGroom = {
     bride: {
       name: "Andrea Varnado",
-      image: AndreaBrideImage,
       bio: "I never thought I would be lucky enough to find somebody like Jacob. " +
           "Loving him has been the easiest and most certain thing I’ve ever done. He somehow always knows how to make me laugh when " +
           "I’m taking life a little too seriously." +
-          "I am beyond excited to begin a lifetime of building, dreaming, and growing together." +
-          "I can't wait to celebrate this moment with the people who helped shape us along the way. Love you all, and see you in Edinburgh!!"
+          "I can't wait to celebrate with the people who helped shape us along the way. Love you all, and see you in Edinburgh!!"
     },
     groom: {
       name: "Jacob Boneta",
-      image: JacobGroomImage,
       bio: "Insert sentence for Jacob here..."
     },
     both: {
@@ -48,7 +43,19 @@ export default function BridalParty() {
     {
       name: "Athena Boneta",
       role: "Maid of Honor",
-      bio: "Insert Paragraph for athena here...",
+      bio: "Hi, I’m the Maid of Honor and Andrea’s best friend, oh and also the Jacob’s little sister, " +
+          "which means I’ve had a front row seat to this love story from every possible angle." +
+          "I’ve known the bride since she was 14, back when life was mostly bad decisions, big dreams, " +
+          "and figuring things out one day at a time. I’ve known the groom since long before he could " +
+          "sleep in a room with the lights off by himself... so yes I have plenty of stories, " +
+          "and yes I’m always willing to share them, all you’ll need to do is ask!" +
+          "It has truly been a pleasure not only watching them grow into the incredible people they are " +
+          "individually, but also getting to witness the way they have grown together as a couple. " +
+          "I even had the honor and mild chaos-inducing satisfaction of setting them up on their very first date. " +
+          "Seeing this whole journey come full circle has been such a joy." +
+          "I look forward to celebrating them, supporting them, and of course continuing to annoy them in " +
+          "Scotland and eventually for the rest of their lives." +
+          "Cheers to Best friends and annoying little sisters!",
       image: AthenaBridesmaidImage
     },
     {
@@ -130,7 +137,16 @@ export default function BridalParty() {
     {
       name: "Andy Pellett",
       role: "Best Man",
-      bio: "Insert Paragraph for Andy here...",
+      bio: "I first met Jacob in 2017 while driving a knockoff Jeep from the mid 1970s. We were offroading with a couple other guys when I accidentally drove " +
+          "over the edge of a cliff, which led to a rather dramatic explosion that really should’ve ended it all for us." +
+          "Fortunately, we were able to remember each others’ PUBG gamertags, group up, and grow an enduring friendship over many nights of playing video games, " +
+          "singing the era-defining songs of the 90s and 2000s (usually to an unwilling audience), and tackling the toughest escape rooms around the country " +
+          "(in matching custom nikes)." +
+          "My first time meeting Andrea was in 2021, when the 3 of us bonded while dodging hungry animals at the natural bridge wildlife ranch outside of " +
+          "San Antonio. That day we learned that there is no place to hide from a determined emu, and you really have to just close the sun roof." +
+          "Jacob and Andrea share a natural, harmonious connection and I think that comes through especially in their shared love for music and singing." +
+          "It’s been great to see the journey of Jacob and Andrea building a life together in San Antonio surrounded by friends and family. And I can’t " +
+          "wait to be a part of their taking the next big step later this year. To a long and happy future!",
       image: AndyGroomsmenImage
     },
     {
@@ -144,7 +160,11 @@ export default function BridalParty() {
     {
       name: "Travis Whittaker",
       role: "Groomsman",
-      bio: "Insert Paragraph for Travis here...",
+      bio: "Hi, I’m Travis. I met Jacob in 2017 through our mutual friend Evan, and we hit it off right away. " +
+          "Even though our friendship has always been long-distance, he’s always been like a brother to me. " +
+          "I met Andrea soon after they started dating, and I quickly understood why Jacob couldn’t stop talking about her. " +
+          "It was obvious they were perfect for each other from the start. I’m so excited to celebrate them this " +
+          "October and officially witness Jacob marrying way out of his league.",
       image: TravisGroomsmenImage
     },
     {
@@ -225,7 +245,7 @@ export default function BridalParty() {
               <div className="flex items-center justify-center gap-6 mb-8">
                 <div className="w-12 h-px bg-[#8B5A3C]"></div>
                 <h1 className="text-2xl md:text-4xl lg:text-7xl text-[#D4C5B9] font-light leading-none tracking-[0.3em]">
-                  THE HAPPY COUPLE
+                  THE COUPLE
                 </h1>
                 <div className="w-12 h-px bg-[#8B5A3C]"></div>
               </div>
