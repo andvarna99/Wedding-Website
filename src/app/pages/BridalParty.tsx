@@ -24,14 +24,20 @@ export default function BridalParty() {
   const brideAndGroom = {
     bride: {
       name: "Andrea Varnado",
-      bio: "I never thought I would be lucky enough to find somebody like Jacob. " +
-          "Loving him has been the easiest and most certain thing I’ve ever done. He somehow always knows how to make me laugh when " +
-          "I’m taking life a little too seriously." +
-          "I can't wait to celebrate with the people who helped shape us along the way. Love you all, and see you in Edinburgh!!"
+      bio: "I never thought I would be lucky enough to find somebody like Jacob. He's someone I admire deeply and strive to be more like in every aspect of my life, so " +
+          "saying I would marry him was the easiest 'yes' and the most certain thing I’ve ever done. He somehow always knows how to make me laugh when I’m taking life a little too seriously. " +
+          "Finding someone that helps you grow more into yourself, while also growing together feels rare and special in a way that words can't fully describe. " +
+          "I can't wait to celebrate our enduring love and connection with the people who helped shape us along the way. Love you all, and see you in Edinburgh!!"
     },
     groom: {
       name: "Jacob Boneta",
-      bio: "Insert sentence for Jacob here..."
+      bio: "The first night I met Andrea, I asked her a few questions that probably sounded random at the time. Looking back, they were anything but. " +
+          "I was asking about family, about stories, and about the way she saw the world. I think I was really trying to understand whether " +
+          "love could feel steady, safe, and full of wonder all at once. " +
+          "In Andrea, I found all of that. Someone caring, deeply thoughtful, and somehow even more beautiful the more you get to know her. " +
+          "She has a way of making life feel lighter without making it smaller, and making me feel known without needing me to explain everything. " +
+          "All these years later, I’m still grateful for that first conversation, for every answer that followed, and for everyone who helped shape " +
+          "the story we get to celebrate in Edinburgh."
     },
     both: {
       name: "Jacob + Andrea",
@@ -239,7 +245,7 @@ export default function BridalParty() {
           <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30 z-10"></div>
 
           {/* Content Overlay - positioned in top 40% */}
-          <div className="relative z-20 max-w-7xl mx-auto pt-32 pb-16">
+          <div className="relative z-20 max-w-7xl mx-auto pt-32 pb-0">
             {/* Header - in top 40% of the section */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-6 mb-8">
@@ -254,7 +260,7 @@ export default function BridalParty() {
           </div>
 
           {/* Bride and Groom Details - Framing the center */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-[30rem] mt-24 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-[30rem] max-w-7xl mx-auto">
             {/* The Bride - Left Side */}
             <div className="text-left md:text-right space-y-4 bg-black/40 backdrop-blur-sm p-8 border border-[#D4C5B9]/20">
               <div className="inline-block">
