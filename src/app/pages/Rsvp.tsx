@@ -9,6 +9,8 @@ export default function RSVP() {
         phone: "",
         attendance: "",
         guestCount: "1",
+        additionalGuestFirstName: "",
+        additionalGuestLastName: "",
         dietaryRestrictions: "",
         message: "",
     });
@@ -189,7 +191,7 @@ export default function RSVP() {
                                         name="guestCount"
                                         className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                     >
-                                        NUMBER OF GUESTS *
+                                        NUMBER OF GUESTS (Please only select a plus 1 if we have discussed it already)*
                                     </label>
                                     <select
                                         id="guestCount"
@@ -201,11 +203,54 @@ export default function RSVP() {
                                     >
                                         <option value="1">1 Guest</option>
                                         <option value="2">2 Guests</option>
-                                        <option value="3">3 Guests</option>
-                                        <option value="4">4 Guests</option>
                                     </select>
                                 </div>
                             </>
+                        )}
+
+                        {/* Additional Guest Fields - only show if 2 guests selected */}
+                        {formData.guestCount === "2" && (
+                            <div className="border border-[#D4C5B9]/20 p-5 space-y-4">
+                                <p className="text-xs tracking-[0.2em] text-[#D4C5B9]/70">
+                                    ADDITIONAL GUEST DETAILS
+                                </p>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label
+                                            htmlFor="additionalGuestFirstName"
+                                            className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                                        >
+                                            FIRST NAME*
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="additionalGuestFirstName"
+                                            name="additionalGuestFirstName"
+                                            value={formData.additionalGuestFirstName}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label
+                                            htmlFor="additionalGuestLastName"
+                                            className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                                        >
+                                            LAST NAME*
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="additionalGuestLastName"
+                                            name="additionalGuestLastName"
+                                            value={formData.additionalGuestLastName}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         )}
 
                         {/* Message */}
@@ -243,7 +288,7 @@ export default function RSVP() {
                     <div className="mt-16 pt-8 border-t border-[#D4C5B9]/20">
                         <p className="text-lg text-[#D4C5B9]/60 leading-relaxed">
                             Please RSVP by July 10th, 2026. If you have any questions,
-                            please don't hesitate to reach out to us directly.
+                            please don't hesitate to reach out to us directly: andvarnado+bonetawedding@gmail.com.
                         </p>
                     </div>
                 </div>
