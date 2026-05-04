@@ -323,6 +323,7 @@ export default function BridalParty() {
                   <div key={index} className="group">
                     <div className="aspect-[3/4] bg-[#1A1A1A]/10 mb-6 overflow-hidden">
                       <ImageWithFallback
+                          loading="lazy"
                           src={person.image}
                           alt={person.name}
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
@@ -354,6 +355,7 @@ export default function BridalParty() {
                   <div key={index} className="group">
                     <div className="aspect-[3/4] bg-[#1A1A1A]/10 mb-6 overflow-hidden">
                       <ImageWithFallback
+                          loading="lazy"
                           src={person.image}
                           alt={person.name}
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"

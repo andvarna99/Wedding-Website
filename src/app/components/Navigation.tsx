@@ -34,10 +34,10 @@ export default function Navigation() {
                   <Link
                       key={link.path}
                       to={link.path}
-                      className={`text-[#D4C5B9] hover:text-[#8B5A3C] text-lg tracking-[0.2em] transition-colors ${
+                      className={`text-lg tracking-[0.2em] transition-colors ${
                           location.pathname === link.path
                               ? "text-[#8B5A3C] font-medium"
-                              : "text-[#1A1A1A]/60 "
+                              : "text-[#D4C5B9] hover:text-[#8B5A3C]"
                       }`}
                   >
                     {link.label}
@@ -63,10 +63,10 @@ export default function Navigation() {
                         key={link.path}
                         to={link.path}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`text-[#D4C5B9] hover:text-[#8B5A3C] block py-3 text-lg tracking-[0.2em] transition-colors ${
+                        className={`text-lg tracking-[0.2em] transition-colors ${
                             location.pathname === link.path
                                 ? "text-[#8B5A3C] font-medium"
-                                : "text-[#1A1A1A]/60"
+                                : "text-[#D4C5B9] hover:text-[#8B5A3C]"
                         }`}
                     >
                       {link.label}

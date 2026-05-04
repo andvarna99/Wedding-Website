@@ -20,9 +20,8 @@ export default function ChatBot() {
       timestamp: new Date()
     }
   ]);
-  const [inputText, setInputText] = useState("");
-  const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -69,7 +68,7 @@ export default function ChatBot() {
     } finally {
       setLoading(false);
     }
-  });
+  }, []);
 
   const handleSend = useCallback(async () => {
     const text = inputMessage;
@@ -187,10 +186,7 @@ export default function ChatBot() {
                 ].map((question, index) => (
                     <button
                         key={index}
-                        onClick={() => {
-                          sendMessage(question);
-                          setInputText(question);
-                        }}
+                        onClick={() => sendMessage(question)}
                         className="px-4 py-2 text-xs bg-white/50 border border-[#1A1A1A]/10 text-[#1A1A1A] hover:bg-[#8B5A3C] hover:text-white hover:border-[#8B5A3C] transition-colors"
                     >
                       {question}

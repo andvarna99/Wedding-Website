@@ -15,46 +15,14 @@ export default function RSVP() {
         message: "",
     });
 
-    const [submitted] = useState(false);
+    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
         });
-    };
-
-    if (submitted) {
-        return (
-            <>
-                <Navigation />
-                <div className="min-h-screen bg-[#1A1A1A] relative px-8 md:px-16 lg:px-24 py-24 md:py-32">
-                    {/* Geometric elements */}
-                    <div className="absolute left-8 md:left-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
-                    <div className="absolute right-8 md:right-16 top-0 h-full w-px bg-[#D4C5B9]/30"></div>
-
-                    <div className="max-w-3xl mx-auto text-center">
-                        <div className="space-y-8">
-                            <h1 className="text-7xl md:text-8xl lg:text-9xl text-[#D4C5B9] font-light leading-none">
-                                thank you
-                            </h1>
-                            <p className="text-xl text-[#D4C5B9]/80">
-                                We've received your RSVP and can't wait to celebrate with you!
-                            </p>
-                            <button
-                                className="mt-12 px-8 py-4 bg-transparent border border-[#D4C5B9] text-[#D4C5B9] text-xs tracking-[0.3em] hover:bg-[#D4C5B9] hover:text-[#1A1A1A] transition-colors"
-                            >
-                                SUBMIT ANOTHER RSVP
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </>
-        );
-    }
-
-    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
-
+};
     return (
         <>
             <Navigation />
@@ -87,9 +55,7 @@ export default function RSVP() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label
-                                    type="text"
-                                    id="firstName"
-                                    name="firstName"
+                                    htmlFor="firstName"
                                     className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                 >
                                     FIRST NAME *
@@ -105,7 +71,7 @@ export default function RSVP() {
 
                             <div>
                                 <label
-                                    type="text" id="lastName" name="lastName"
+                                    htmlFor="lastName"
                                     className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                 >
                                     LAST NAME *
@@ -124,9 +90,7 @@ export default function RSVP() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label
-                                    type="email"
-                                    id="email"
-                                    name="email"
+                                    htmlFor="email"
                                     className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                 >
                                     EMAIL *
@@ -142,9 +106,7 @@ export default function RSVP() {
 
                             <div>
                                 <label
-                                    type="number"
-                                    id="phone"
-                                    name="phone"
+                                    htmlFor="phone"
                                     className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                 >
                                     PHONE
@@ -161,9 +123,7 @@ export default function RSVP() {
                         {/* Attendance */}
                         <div>
                             <label
-                                type="text"
-                                id="attendance"
-                                name="attendance"
+                                htmlFor="attendance"
                                 className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                             >
                                 WILL YOU ATTEND? *
@@ -186,9 +146,7 @@ export default function RSVP() {
                             <>
                                 <div>
                                     <label
-                                        type="number"
-                                        id="guestCount"
-                                        name="guestCount"
+                                        htmlFor="guestCount"
                                         className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                     >
                                         NUMBER OF GUESTS (Please only select a plus 1 if we have discussed it already)*
@@ -256,9 +214,7 @@ export default function RSVP() {
                         {/* Message */}
                         <div>
                             <label
-                                id="message"
-                                type="text"
-                                name="message"
+                                htmlFor="message"
                                 className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                             >
                                 MESSAGE TO THE COUPLE
