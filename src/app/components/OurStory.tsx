@@ -1,4 +1,5 @@
 import engagement_image from "../../assets/a+j_in_the_rain.JPG.jpg";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export default function OurStory() {
   return (
@@ -75,10 +76,8 @@ export default function OurStory() {
 
               {/* Main image */}
               <div className="relative aspect-[3/4] bg-[#1A1A1A] overflow-hidden rounded-[5px]">
-                <img
-                  src={
-                    engagement_image
-                  }
+                <ImageWithFallback
+                  src={engagement_image}
                   alt="Andrea and Jacob"
                   className="w-full h-full object-cover opacity-90 rounded-[5px] grayscale"
                 />

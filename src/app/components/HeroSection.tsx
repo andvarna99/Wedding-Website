@@ -1,5 +1,6 @@
 import image_ada58e7e40d08004e54f01d15ef69ae212379896 from '../../assets/carlowrie_green.png';
 import {useMemo} from "react";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export default function HeroSection() {
   const petals = useMemo(() => {
@@ -49,7 +50,7 @@ export default function HeroSection() {
 
           <div className="absolute -right-0 bottom-3 -z-0 w-64 md:w-64 h-64 md:h-64 flex justify-end ml-auto opacity-50">
             <div className="w-full h-full rounded-full overflow-hidden">
-              <img
+              <ImageWithFallback
                   src={
                     image_ada58e7e40d08004e54f01d15ef69ae212379896
                   }

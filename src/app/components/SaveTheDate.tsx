@@ -1,5 +1,6 @@
 import castleImage from "../../assets/carlowrie_red.png";
 import {Link} from "react-router-dom";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export default function SaveTheDate() {
   return (
@@ -13,7 +14,7 @@ export default function SaveTheDate() {
           {/* Left side - Image */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] bg-[#1A1A1A] overflow-hidden relative rounded-[5px]">
-              <img
+              <ImageWithFallback
                 src={castleImage}
                 alt="Carlowrie Castle"
                 className="w-full h-full object-cover opacity-85 rounded-[5px]"
