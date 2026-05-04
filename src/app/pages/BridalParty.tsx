@@ -255,7 +255,6 @@ export default function BridalParty() {
                 </h1>
                 <div className="w-12 h-px bg-[#8B5A3C]"></div>
               </div>
-              <div className="w-32 h-px bg-[#8B5A3C] mx-auto mt-12"></div>
             </div>
           </div>
 
