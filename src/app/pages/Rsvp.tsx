@@ -1,8 +1,23 @@
 import { useState } from "react";
 import Navigation from "../components/Navigation";
 
+type SubmitStatus = "idle" | "submitting" | "success" | "error";
+
+interface FormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    attendance: string;
+    guestCount: string;
+    additionalGuestFirstName: string;
+    additionalGuestLastName: string;
+    dietaryRestrictions: string;
+    message: string;
+}
+
 export default function RSVP() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         firstName: "",
         lastName: "",
         email: "",
@@ -15,14 +30,51 @@ export default function RSVP() {
         message: "",
     });
 
-    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
+    const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-};
+    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL as string;
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    ) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setSubmitStatus("submitting");
+
+        try {
+            const res = await fetch(FORMSPREE_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json", Accept: "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            setSubmitStatus("success");
+        } catch {
+            setSubmitStatus("error");
+        }
+    };
+
+    if (submitStatus === "success") {
+        return (
+            <>
+                <Navigation />
+                <div className="min-h-screen bg-[#1A1A1A] flex items-center justify-center px-8">
+                    <div className="text-center max-w-lg">
+                        <h2 className="text-5xl text-[#D4C5B9] font-light mb-6">Thank You!</h2>
+                        <div className="w-16 h-px bg-[#8B5A3C] mx-auto mb-6" />
+                        <p className="text-[#D4C5B9]/70 text-lg leading-relaxed">
+                            We've received your RSVP and can't wait to celebrate with you.
+                        </p>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
             <Navigation />
@@ -35,9 +87,9 @@ export default function RSVP() {
                     {/* Header */}
                     <div className="mb-16">
                         <div className="flex items-center gap-6 mb-8">
-                <span className="text-xs tracking-[0.3em] text-[#D4C5B9]">
-                  JOIN OUR CELEBRATION
-                </span>
+                            <span className="text-xs tracking-[0.3em] text-[#D4C5B9]">
+                                JOIN OUR CELEBRATION
+                            </span>
                             <div className="w-12 h-px bg-[#8B5A3C]"></div>
                         </div>
 
@@ -50,7 +102,7 @@ export default function RSVP() {
                     </div>
 
                     {/* Form */}
-                    <form action={FORMSPREE_URL} method="POST" className="space-y-8">
+                    <form onSubmit={handleSubmit} className="space-y-8">
                         {/* Name Fields */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -61,6 +113,7 @@ export default function RSVP() {
                                     FIRST NAME *
                                 </label>
                                 <input
+                                    id="firstName"
                                     name="firstName"
                                     value={formData.firstName}
                                     onChange={handleChange}
@@ -77,6 +130,7 @@ export default function RSVP() {
                                     LAST NAME *
                                 </label>
                                 <input
+                                    id="lastName"
                                     name="lastName"
                                     value={formData.lastName}
                                     onChange={handleChange}
@@ -96,6 +150,8 @@ export default function RSVP() {
                                     EMAIL *
                                 </label>
                                 <input
+                                    id="email"
+                                    type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
@@ -112,6 +168,8 @@ export default function RSVP() {
                                     PHONE
                                 </label>
                                 <input
+                                    id="phone"
+                                    type="tel"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
@@ -129,6 +187,7 @@ export default function RSVP() {
                                 WILL YOU ATTEND? *
                             </label>
                             <select
+                                id="attendance"
                                 name="attendance"
                                 value={formData.attendance}
                                 onChange={handleChange}
@@ -149,7 +208,7 @@ export default function RSVP() {
                                         htmlFor="guestCount"
                                         className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                     >
-                                        NUMBER OF GUESTS (Please only select a plus 1 if we have discussed it already)*
+                                        NUMBER OF GUESTS (Please only select a plus 1 if we have discussed it already) *
                                     </label>
                                     <select
                                         id="guestCount"
@@ -163,53 +222,71 @@ export default function RSVP() {
                                         <option value="2">2 Guests</option>
                                     </select>
                                 </div>
+
+                                {/* Additional Guest Fields - only show if 2 guests selected */}
+                                {formData.guestCount === "2" && (
+                                    <div className="border border-[#D4C5B9]/20 p-5 space-y-4">
+                                        <p className="text-xs tracking-[0.2em] text-[#D4C5B9]/70">
+                                            ADDITIONAL GUEST DETAILS
+                                        </p>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label
+                                                    htmlFor="additionalGuestFirstName"
+                                                    className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                                                >
+                                                    FIRST NAME *
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    id="additionalGuestFirstName"
+                                                    name="additionalGuestFirstName"
+                                                    value={formData.additionalGuestFirstName}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label
+                                                    htmlFor="additionalGuestLastName"
+                                                    className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                                                >
+                                                    LAST NAME *
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    id="additionalGuestLastName"
+                                                    name="additionalGuestLastName"
+                                                    value={formData.additionalGuestLastName}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
                             </>
                         )}
 
-                        {/* Additional Guest Fields - only show if 2 guests selected */}
-                        {formData.guestCount === "2" && (
-                            <div className="border border-[#D4C5B9]/20 p-5 space-y-4">
-                                <p className="text-xs tracking-[0.2em] text-[#D4C5B9]/70">
-                                    ADDITIONAL GUEST DETAILS
-                                </p>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <label
-                                            htmlFor="additionalGuestFirstName"
-                                            className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
-                                        >
-                                            FIRST NAME*
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="additionalGuestFirstName"
-                                            name="additionalGuestFirstName"
-                                            value={formData.additionalGuestFirstName}
-                                            onChange={handleChange}
-                                            required
-                                            className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label
-                                            htmlFor="additionalGuestLastName"
-                                            className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
-                                        >
-                                            LAST NAME*
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="additionalGuestLastName"
-                                            name="additionalGuestLastName"
-                                            value={formData.additionalGuestLastName}
-                                            onChange={handleChange}
-                                            required
-                                            className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+                        {/* Dietary Restrictions */}
+                        <div>
+                            <label
+                                htmlFor="dietaryRestrictions"
+                                className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                            >
+                                DIETARY RESTRICTIONS
+                            </label>
+                            <input
+                                id="dietaryRestrictions"
+                                name="dietaryRestrictions"
+                                value={formData.dietaryRestrictions}
+                                onChange={handleChange}
+                                placeholder="e.g. vegetarian, gluten-free, nut allergy"
+                                className="w-full px-4 py-3 bg-transparent border border-[#D4C5B9]/30 text-[#D4C5B9] placeholder-[#D4C5B9]/30 focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                            />
+                        </div>
 
                         {/* Message */}
                         <div>
@@ -220,6 +297,7 @@ export default function RSVP() {
                                 MESSAGE TO THE COUPLE
                             </label>
                             <textarea
+                                id="message"
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
@@ -229,13 +307,20 @@ export default function RSVP() {
                             />
                         </div>
 
+                        {submitStatus === "error" && (
+                            <p className="text-red-400 text-sm tracking-wide">
+                                Something went wrong. Please try again or email us directly.
+                            </p>
+                        )}
+
                         {/* Submit Button */}
                         <div className="pt-8">
                             <button
                                 type="submit"
-                                className="w-full md:w-auto px-12 py-4 bg-transparent border border-[#D4C5B9] text-[#D4C5B9] text-xs tracking-[0.3em] hover:bg-[#D4C5B9] hover:text-[#1A1A1A] transition-colors"
+                                disabled={submitStatus === "submitting"}
+                                className="w-full md:w-auto px-12 py-4 bg-transparent border border-[#D4C5B9] text-[#D4C5B9] text-xs tracking-[0.3em] hover:bg-[#D4C5B9] hover:text-[#1A1A1A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                SUBMIT RSVP
+                                {submitStatus === "submitting" ? "SUBMITTING..." : "SUBMIT RSVP"}
                             </button>
                         </div>
                     </form>

@@ -5,7 +5,7 @@ import { Input } from "../components/ui/input";
 import Navigation from "../components/Navigation";
 
 interface Message {
-  id: number;
+  id: string | number;
   text: string;
   isBot: boolean;
   timestamp: Date;
@@ -77,7 +77,7 @@ export default function ChatBot() {
   }, [inputMessage, sendMessage]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") handleSend().then(r => {console.log("handleSend errored")});
+    if (e.key === "Enter") handleSend().catch(console.error);
   };
 
   const TypingBubble = () => (

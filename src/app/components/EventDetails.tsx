@@ -165,7 +165,7 @@ export default function EventDetails() {
                 Kindly respond by
               </p>
               <p className="text-2xl text-[#D4C5B9] font-light">
-                July 15th, 2026
+                July 10th, 2026
               </p>
             </div>
 
