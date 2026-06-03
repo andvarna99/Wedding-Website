@@ -164,7 +164,7 @@ export default function BridalParty() {
       image: AveryGroomsmenImage
     },
     {
-      name: "Travis Whittaker",
+      name: "Travis Whiteaker",
       role: "Groomsman",
       bio: "Hi, I’m Travis. I met Jacob in 2017 through our mutual friend Evan, and we hit it off right away. " +
           "Even though our friendship has always been long-distance, he’s always been like a brother to me. " +
