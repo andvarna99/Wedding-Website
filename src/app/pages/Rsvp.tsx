@@ -12,6 +12,8 @@ interface FormData {
     guestCount: string;
     additionalGuestFirstName: string;
     additionalGuestLastName: string;
+    additionalGuest2FirstName: string;
+    additionalGuest2LastName: string;
     dietaryRestrictions: string;
     message: string;
 }
@@ -26,6 +28,8 @@ export default function RSVP() {
         guestCount: "1",
         additionalGuestFirstName: "",
         additionalGuestLastName: "",
+        additionalGuest2FirstName: "",
+        additionalGuest2LastName: "",
         dietaryRestrictions: "",
         message: "",
     });
@@ -37,6 +41,19 @@ export default function RSVP() {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
     ) => {
+        const updated = { ...formData, [e.target.name]: e.target.value };
+
+        if (e.target.name === "guestCount") {
+            if (e.target.value === "1") {
+                updated.additionalGuestFirstName = "";
+                updated.additionalGuestLastName = "";
+                updated.additionalGuest2FirstName = "";
+                updated.additionalGuest2LastName = "";
+            } else if (e.target.value === "2") {
+                updated.additionalGuest2FirstName = "";
+                updated.additionalGuest2LastName = "";
+            }
+        }
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -208,7 +225,7 @@ export default function RSVP() {
                                         htmlFor="guestCount"
                                         className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
                                     >
-                                        NUMBER OF GUESTS (Please only select a plus 1 if we have discussed it already) *
+                                        NUMBER OF GUESTS (Please only select extra guests if we have discussed it already) *
                                     </label>
                                     <select
                                         id="guestCount"
@@ -220,11 +237,12 @@ export default function RSVP() {
                                     >
                                         <option value="1">1 Guest</option>
                                         <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
                                     </select>
                                 </div>
 
-                                {/* Additional Guest Fields - only show if 2 guests selected */}
-                                {formData.guestCount === "2" && (
+                                {/* Additional Guest 2 - show when 2 or 3 guests selected */}
+                                {(formData.guestCount === "2" || formData.guestCount === "3") && (
                                     <div className="border border-[#D4C5B9]/20 p-5 space-y-4">
                                         <p className="text-xs tracking-[0.2em] text-[#D4C5B9]/70">
                                             ADDITIONAL GUEST DETAILS
@@ -259,6 +277,51 @@ export default function RSVP() {
                                                     id="additionalGuestLastName"
                                                     name="additionalGuestLastName"
                                                     value={formData.additionalGuestLastName}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Additional Guest 3 - show only when 3 guests selected */}
+                                {formData.guestCount === "3" && (
+                                    <div className="border border-[#D4C5B9]/20 p-5 space-y-4">
+                                        <p className="text-xs tracking-[0.2em] text-[#D4C5B9]/70">
+                                            ADDITIONAL GUEST 2 DETAILS
+                                        </p>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <div>
+                                                <label
+                                                    htmlFor="additionalGuest2FirstName"
+                                                    className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                                                >
+                                                    FIRST NAME *
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    id="additionalGuest2FirstName"
+                                                    name="additionalGuest2FirstName"
+                                                    value={formData.additionalGuest2FirstName}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
+                                                />
+                                            </div>
+                                            <div>
+                                                <label
+                                                    htmlFor="additionalGuest2LastName"
+                                                    className="block text-xs tracking-[0.2em] text-[#D4C5B9] mb-3"
+                                                >
+                                                    LAST NAME *
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    id="additionalGuest2LastName"
+                                                    name="additionalGuest2LastName"
+                                                    value={formData.additionalGuest2LastName}
                                                     onChange={handleChange}
                                                     required
                                                     className="w-full px-4 py-3 bg-[#1A1A1A] border border-[#D4C5B9]/30 text-[#D4C5B9] focus:outline-none focus:border-[#8B5A3C] transition-colors"
