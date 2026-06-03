@@ -182,6 +182,7 @@ export default function ChatBot() {
                   "What time is the ceremony?",
                   "Where is the venue?",
                   "What's the dress code?",
+                  "What do I need to travel to Scotland?",
                   "View the schedule"
                 ].map((question, index) => (
                     <button
