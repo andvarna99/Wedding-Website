@@ -53,7 +53,7 @@ export default function Schedule() {
     {
       time: "8:00 PM",
       event: "Evening Reception",
-      description: "Dance the night away with live music and entertainment.",
+      description: "Dance the night away with music and entertainment.",
       location: "Castle Orangery"
     },
     {
@@ -64,7 +64,7 @@ export default function Schedule() {
     },
     {
       time: "12:30 AM",
-      event: "Last Call and LastDance",
+      event: "Last Call and Last Dance",
       description: "One final drink and dance to close out our perfect day.",
       location: "Castle Orangery"
     }

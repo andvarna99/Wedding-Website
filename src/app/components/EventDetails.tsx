@@ -53,7 +53,7 @@ export default function EventDetails() {
               <span className="text-[#8B5A3C]">
                 Dress Code:
               </span>{" "}
-              Formal Attire (Not white-tie but not cocktail attire: think midi - floor length dresses, tailored jumpsuits, well-fitted suits, etc... If any questions arise don't hesitate to reach out or ask or chat bot!)
+              Formal Attire (Not white-tie but not cocktail attire: think midi - floor length dresses, tailored jumpsuits, well-fitted suits, etc... If any questions arise don't hesitate to reach out or ask our chat bot!)
             </p>
           </div>
 
@@ -134,7 +134,7 @@ export default function EventDetails() {
             </div>
             <p className="text-xl text-[#D4C5B9]/80 leading-relaxed mb-4">
               Each guest will be provided with champagne on arrival to the venue, along with a glass during cocktail hour after the ceremony.
-              Once the reception has begun each guest will be offered about 2 glass of red or white wine.
+              Once the reception has begun each guest will be offered about 2 glasses of red or white wine.
               After that, we've got your first round covered.
               Any other drinks you'd like will be through the cash bar which will be flowing until last call around 12:30 AM.
             </p>
